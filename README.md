@@ -11,3 +11,10 @@ XGBoost model is commonly used for classification and regression gradient boosti
 3. error tolerance: 10.81941211946799
 4. diff: 0.6098441612242311
 5. The model generalizes well to unseen data. (shows the indication that the model is not overfitting or underfitting)
+
+### ARIMA (Auto Regressive Integrated Moving Average)
+ARIMA is a class of models that forecast a time series data based on the lags (Auto Regressive), differencing (Integrated), the residual errors (Moving Average). This model assumes the data is stationary or not evolving over time, so we need to check whether the data is stationary using the Augmented Dickey-Fuller method, which measures the p-value for the hypothesis test. The ARIMA model has parameters p, d, and q, which are determined using the autocorrelation function (ACF) for p, differencing for d, and the partial autocorrelation function (PACF) for q. Once the parameters are known, the data is divided into training and testing sets and is ready to be trained using the model. The following evaluation metrics are used in this forecasting model:
+1. Mean Absolute Error (MAE): 0.2242
+2. Mean Absolute Percentage Error (MAPE): 0.3463
+3. Root Mean Squared Error (RMSE): 0.2769
+
